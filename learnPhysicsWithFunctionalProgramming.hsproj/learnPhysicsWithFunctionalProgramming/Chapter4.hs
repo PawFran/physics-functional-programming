@@ -1,3 +1,5 @@
+module Chapter4 where 
+
 type R = Double
 
 type Time           = R

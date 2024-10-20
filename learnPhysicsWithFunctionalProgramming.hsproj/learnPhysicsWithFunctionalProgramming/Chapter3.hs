@@ -1,11 +1,4 @@
---1 
---False || True && False || True == False || (True && False) || True 
--- why it doesn't start evaluation from True == False ?
---(2 /3 /4 == 4 /3 /2) == False
---(7 - 5 / 4 > 6 || 2 ^ 5 - 1 == 31) == ( ( (7 - (5 / 4)) > 6)  || ( ((2 ^ 5) - 1) == 31 ) )
--- 2 < 3 < 4 wrong, would be comparing boolean with int
---(2 < 3 && 3 < 4) == ( (2 < 3) && (3 < 4) )
--- 2 && 3 < 4 wrong, incompatibile types
+module Chapter3 where
 
 --2 
 f :: Double -> Double

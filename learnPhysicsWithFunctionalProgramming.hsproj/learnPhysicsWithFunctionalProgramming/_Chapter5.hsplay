@@ -1,0 +1,8 @@
+-- Haskell Playground 1.0
+desiredIterations 1 expList
+
+desiredIterations 10 expList
+
+desiredIterations 1 expSeries
+
+desiredIterations 10 expSeries

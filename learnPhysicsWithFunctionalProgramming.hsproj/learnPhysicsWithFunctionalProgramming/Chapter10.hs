@@ -1,3 +1,5 @@
+module Chapter10 where
+
 import SimpleVec
 import Graphics.Gnuplot.Simple
 import Data.Function ((&))

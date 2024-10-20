@@ -1,3 +1,5 @@
+module Chapter5 where
+  
 import Data.Function ((&))
 
 --1

@@ -1,3 +1,5 @@
+module Chapter11 where
+
 import Graphics.Gnuplot.Simple
 import Data.Function ((&))
 

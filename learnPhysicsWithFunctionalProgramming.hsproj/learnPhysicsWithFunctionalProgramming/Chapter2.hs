@@ -1,4 +1,7 @@
+module Chapter2 where
+
 import Data.Function ((&))
+import Chapter1 (deg2Rad)
 
 -- 1
 f1 :: Double -> Double
@@ -23,11 +26,8 @@ vRock30 :: Time -> Double
 vRock30 t = 30 - g*t
 
 -- 4
-radians :: Double -> Double
-radians = (*) (pi/180)
-
 sinDeg :: Double -> Double
-sinDeg x = sin . radians $ x
+sinDeg x = sin . deg2Rad $ x
 
 -- 5
 f x = x ** (1/3)

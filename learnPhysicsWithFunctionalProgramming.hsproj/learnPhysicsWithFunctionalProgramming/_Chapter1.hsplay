@@ -1,0 +1,16 @@
+-- Haskell Playground 1.0
+-- 1
+sin 30
+
+sin (deg2Rad 30)
+
+(rad2Deg . deg2Rad) 30
+
+--2
+2 ^ 3 ^ 4 == 2 ^ (3 ^ 4)
+2 / 3 / 4 == (2 / 3) / 4
+7 - 5 / 4 == 7 - (5 / 4)
+log 49/7 == (log 49) / 7
+
+--4
+(sqrt 2) ** 2

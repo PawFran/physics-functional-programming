@@ -1,5 +1,6 @@
+module Chapter9 where
+
 import Data.Function ((&))
-import Graphics.Gnuplot.Simple
 
 type R = Double
 

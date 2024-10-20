@@ -1,3 +1,5 @@
+module Chapter7 where
+  
 import Data.List
 import Graphics.Gnuplot.Simple
 

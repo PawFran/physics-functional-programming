@@ -1,3 +1,5 @@
+module Chapter6 where
+  
 import Data.Function ((&))
 
 type R = Double
