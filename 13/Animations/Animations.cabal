@@ -24,13 +24,6 @@ source-repository head
   location: https://github.com/githubuser/Animations
 
 library
-  exposed-modules:
-      ThreeDPictures.BlueCube
-      ThreeDPictures.CoordinateSystem
-      TwoDAnimations.Projectile
-      TwoDAnimations.SimpleDisk
-      TwoDPictures.DiskAndCircle
-      TwoDPictures.Lines
   other-modules:
       Paths_Animations
   autogen-modules:
@@ -46,14 +39,104 @@ library
     , spatial-math
   default-language: Haskell2010
 
-executable Animations-exe
+executable Blue-cube-exe
   main-is: Main.hs
   other-modules:
       Paths_Animations
   autogen-modules:
       Paths_Animations
   hs-source-dirs:
-      app
+      app/BlueCube
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Animations
+    , base >=4.7 && <5
+    , gloss
+    , linear
+    , not-gloss
+    , spatial-math
+  default-language: Haskell2010
+
+executable Coordinate-system
+  main-is: Main.hs
+  other-modules:
+      Paths_Animations
+  autogen-modules:
+      Paths_Animations
+  hs-source-dirs:
+      app/CoordinateSystem
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Animations
+    , base >=4.7 && <5
+    , gloss
+    , linear
+    , not-gloss
+    , spatial-math
+  default-language: Haskell2010
+
+executable Disk-and-circle-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_Animations
+  autogen-modules:
+      Paths_Animations
+  hs-source-dirs:
+      app/DiskAndCircle
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Animations
+    , base >=4.7 && <5
+    , gloss
+    , linear
+    , not-gloss
+    , spatial-math
+  default-language: Haskell2010
+
+executable Lines-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_Animations
+  autogen-modules:
+      Paths_Animations
+  hs-source-dirs:
+      app/Lines
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Animations
+    , base >=4.7 && <5
+    , gloss
+    , linear
+    , not-gloss
+    , spatial-math
+  default-language: Haskell2010
+
+executable Projectile-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_Animations
+  autogen-modules:
+      Paths_Animations
+  hs-source-dirs:
+      app/Projectile
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Animations
+    , base >=4.7 && <5
+    , gloss
+    , linear
+    , not-gloss
+    , spatial-math
+  default-language: Haskell2010
+
+executable Simple-disk-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_Animations
+  autogen-modules:
+      Paths_Animations
+  hs-source-dirs:
+      app/SimpleDisk
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       Animations

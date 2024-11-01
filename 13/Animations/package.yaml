@@ -25,7 +25,6 @@ dependencies:
 - not-gloss
 - linear
 - spatial-math
-# - TypeComposee
 
 ghc-options:
 - -Wall
@@ -42,15 +41,65 @@ library:
   source-dirs: src
 
 executables:
-  Animations-exe:
-    main:                Main.hs
-    source-dirs:         app
+  Lines-exe:
+    main:         Main.hs
+    source-dirs:  app/Lines
     ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
     dependencies:
-    - Animations
+      - Animations
+
+  Disk-and-circle-exe:
+    main:         Main.hs
+    source-dirs:  app/DiskAndCircle
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - Animations
+
+  Simple-disk-exe:
+    main:         Main.hs
+    source-dirs:  app/SimpleDisk
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - Animations
+
+  Projectile-exe:
+    main:         Main.hs
+    source-dirs:  app/Projectile
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - Animations
+
+  Blue-cube-exe:
+    main:         Main.hs
+    source-dirs:  app/BlueCube
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - Animations
+
+  Coordinate-system:
+    main:         Main.hs
+    source-dirs:  app/CoordinateSystem
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - Animations
 
 tests:
   Animations-test:
