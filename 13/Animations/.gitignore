@@ -1,0 +1,21 @@
+# Everything ending with ~
+*~
+
+# macOS system files
+.DS_Store
+
+# IntelliJ files
+.idea
+
+# Stack build artifacts
+.stack-work/
+
+# Cabal build artifacts
+/dist-newstyle/
+/.cabal-sandbox/
+/cabal.project.local
+
+# GHCi and HLS configuration
+.ghc.environment.*
+.ghci
+.hie/

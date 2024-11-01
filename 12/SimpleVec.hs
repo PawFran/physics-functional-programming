@@ -21,7 +21,7 @@ showDouble :: Double -> String
 showDouble x | x < 0     = "(" ++ show x ++ ")"
              | otherwise = show x
 
-instance Show Vec where 
+instance Show Vec where
     show (Vec x y z) = "Vec " ++ showDouble x ++ " "
                               ++ showDouble y ++ " "
                               ++ showDouble z
@@ -33,13 +33,13 @@ type Acceleration = Vec
 type Time = R
 
 iHat :: Vec
-iHat = Vec 1 0 0 
+iHat = Vec 1 0 0
 
 jHat :: Vec
-jHat = Vec 0 1 0 
+jHat = Vec 0 1 0
 
 kHat :: Vec
-kHat = Vec 0 0 1 
+kHat = Vec 0 0 1
 
 zeroV :: Vec
 zeroV = Vec 0 0 0
@@ -72,11 +72,11 @@ Vec ax ay az >< Vec bx by bz = Vec (ay*bz - az*by) (az*bx - ax*bz) (ax*by - ay*b
 v ^/ x = v ^* (1/x)
 
 magnitude :: Vec -> Double
-magnitude v = sqrt(v <.> v)
+magnitude v = sqrt (v <.> v)
 
 positionCA :: PosVec -> Velocity -> Acceleration -> Time -> PosVec
 positionCA r0 v0 a0 t = 0.5 *^ t**2 *^ a0 ^+^ v0 ^* t ^+^ r0
 
 projectilePos :: PosVec -> Velocity -> Time -> Vec
 projectilePos r0 v0 = positionCA r0 v0 g
-                        where g = (9.81 *^ negateVec kHat)
+                        where g = 9.81 *^ negateVec kHat
