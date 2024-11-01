@@ -57,7 +57,7 @@ executable Blue-cube-exe
     , spatial-math
   default-language: Haskell2010
 
-executable Coordinate-system
+executable Coordinate-system-exe
   main-is: Main.hs
   other-modules:
       Paths_Animations
@@ -129,6 +129,24 @@ executable Projectile-exe
     , spatial-math
   default-language: Haskell2010
 
+executable Rotating-cube-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_Animations
+  autogen-modules:
+      Paths_Animations
+  hs-source-dirs:
+      app/RotatingCube
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Animations
+    , base >=4.7 && <5
+    , gloss
+    , linear
+    , not-gloss
+    , spatial-math
+  default-language: Haskell2010
+
 executable Simple-disk-exe
   main-is: Main.hs
   other-modules:
@@ -137,6 +155,24 @@ executable Simple-disk-exe
       Paths_Animations
   hs-source-dirs:
       app/SimpleDisk
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Animations
+    , base >=4.7 && <5
+    , gloss
+    , linear
+    , not-gloss
+    , spatial-math
+  default-language: Haskell2010
+
+executable ThreeD-simulation-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_Animations
+  autogen-modules:
+      Paths_Animations
+  hs-source-dirs:
+      app/ThreeDSimulation
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       Animations

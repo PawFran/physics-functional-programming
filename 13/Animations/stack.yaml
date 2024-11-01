@@ -20,6 +20,9 @@
 # snapshot:
 #   url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/22/39.yaml
 
+# alternatively instead of snapshot:
+resolver: lts-18.28 #because of particular dependencies' requirements
+
 # User packages to be built.
 # Various formats can be used as shown in the example below.
 #
@@ -69,5 +72,3 @@ extra-deps:
 #
 # Allow a newer minor version of GHC than the snapshot specifies
 # compiler-check: newer-minor
-
-resolver: lts-18.28
