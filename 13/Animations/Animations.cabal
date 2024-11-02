@@ -129,6 +129,24 @@ executable Projectile-exe
     , spatial-math
   default-language: Haskell2010
 
+executable Rotating-coordinates-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_Animations
+  autogen-modules:
+      Paths_Animations
+  hs-source-dirs:
+      app/RotatingCoordinates
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Animations
+    , base >=4.7 && <5
+    , gloss
+    , linear
+    , not-gloss
+    , spatial-math
+  default-language: Haskell2010
+
 executable Rotating-cube-exe
   main-is: Main.hs
   other-modules:
