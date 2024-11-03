@@ -16,17 +16,19 @@ disk radius = ThickCircle (radius / 2) radius
 redDisk :: Picture
 redDisk = Color red (disk 25)
 
-type State = (Float, Float)
+type Position = (Float, Float)
+type Velocity = (Float, Float)
+type State = (Position, Velocity)
 
 initialState :: State
-initialState = (-100, -100)
+initialState = ((-200, -100), (40, 80))
 
 displayFunc :: State -> Picture
-displayFunc (x, y) = Translate x y redDisk
+displayFunc ((x,y), _) = Translate x y redDisk
 
 updateFunc :: Float -> State -> State
-updateFunc dt (x, y) = (x + 10 * dt * speed, y - 5 * dt * speed)
-                            where speed = 10 -- dt is pixel/second
-
+updateFunc dt ((x,y), (vx, vy)) = ((x + vx * dt, y + vy * dt)
+                                  ,(vx         , vy - 9.8 * dt)
+                                  )
 main :: IO ()
-main =  simulate displayMode black rate initialState displayFunc (const updateFunc)
+main = simulate displayMode black rate initialState displayFunc (const updateFunc)
